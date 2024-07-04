@@ -41,6 +41,7 @@ const TransactionTable = ({ transactions }: TransactionTableProps) => {
           <TableHead className="px-2">Date</TableHead>
           <TableHead className="px-2 max-md:hidden">Channel</TableHead>
           <TableHead className="px-2 max-md:hidden">Category</TableHead>
+          <TableHead className="px-2 max-md:hidden">Status</TableHead>
         </TableRow>
       </TableHeader>
       <TableBody>
