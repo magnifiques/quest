@@ -12,7 +12,7 @@ const TotalBalanceBox = ({
   return (
     <div className="total-balance">
       <div className="total-balance-chart">
-        <DonutChart />
+        <DonutChart accounts={accounts} />
       </div>
       <div className="flex flex-col gap-6">
         <h2 className="header-2">{totalBanks} Bank Account(s)</h2>
