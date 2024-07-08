@@ -6,7 +6,7 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { Button } from "@/components/ui/button";
-import { Form, FormControl, FormLabel } from "@/components/ui/form";
+import { Form } from "@/components/ui/form";
 import CustomFormField from "./CustomFormField";
 import { authFormSchema } from "@/lib/utils";
 import { Loader2 } from "lucide-react";
@@ -21,10 +21,6 @@ type AuthFormProps = {
 
 const AuthForm = ({ type }: AuthFormProps) => {
   const [user, setUser] = useState(null);
-
-  const date = new Date();
-
-  const [startDate, setStartDate] = useState(new Date());
   const [isLoading, setIsLoading] = useState(false);
 
   const router = useRouter();
@@ -58,6 +54,7 @@ const AuthForm = ({ type }: AuthFormProps) => {
           email: data.email,
           password: data.password,
         };
+
         const newUser = await signUp(userData);
         setUser(newUser);
       }
@@ -155,20 +152,6 @@ const AuthForm = ({ type }: AuthFormProps) => {
                     />
                   </div>
                   <div className="flex gap-4">
-                    {/* <FormControl>
-                      <div>
-                        <FormLabel className="form-label">
-                          Date Of Birth
-                        </FormLabel>
-                        <DatePicker
-                          className="text-16 placeholder:text-16 rounded-lg border border-gray-300 text-gray-900 placeholder:text-gray-500 mt-2 p-2"
-                          wrapperClassName="datePicker"
-                          selected={startDate}
-                          onChange={(date) => setStartDate(date!)}
-                          dateFormat="yyyy/MM/dd"
-                        />
-                      </div> */}
-                    {/* </FormControl> */}
                     <CustomFormField
                       name="dateOfBirth"
                       label="Date Of Birth"

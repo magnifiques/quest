@@ -4,11 +4,13 @@ import RightSideBar from "@/components/custom/RightSideBar";
 import TotalBalanceBox from "@/components/custom/TotalBalanceBox";
 import { getAccount, getAccounts } from "@/lib/actions/bank.actions";
 import { getLoggedInUser } from "@/lib/actions/user.actions";
+import { UserCheckIcon } from "lucide-react";
 import React from "react";
 
 const Home = async ({ searchParams: { id, page } }: SearchParamProps) => {
   const currentPage = Number(page as string) || 1;
   const user = await getLoggedInUser();
+  console.log(user);
   const accounts = await getAccounts({ userId: user.$id });
 
   if (!accounts) return;
