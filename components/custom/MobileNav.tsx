@@ -27,7 +27,10 @@ const MobileNav = ({ user }: MobileNavProps) => {
           />
         </SheetTrigger>
         <SheetContent side="left" className="border-none bg-white">
-          <Link href="/">Quest</Link>
+          <Link href="/" className="flex items-center gap-2">
+            <Image src="/icons/logo.png" alt="Logo" width={30} height={30} />
+            Quest
+          </Link>
           <div className="mobilenav-sheet">
             <SheetClose asChild>
               <nav className="flex h-full flex-col gap-6 pt-16 text-white">

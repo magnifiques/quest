@@ -14,8 +14,9 @@ const Sidebar = ({ user }: SiderbarProps) => {
       <nav className="flex flex-col gap-4">
         <Link
           href="/"
-          className="mb-12 flex text-purple-500 text-xl cursor-pointer items-center gap-2"
+          className="mb-12 flex text-green-500 font-semibold text-xl cursor-pointer items-center gap-2"
         >
+          <Image src="/icons/logo.png" alt="logo" width={30} height={30} />
           Quest
         </Link>
         {sidebarLinks.map((link, index) => {

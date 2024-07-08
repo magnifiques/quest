@@ -13,6 +13,7 @@ import { Loader2 } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { signIn, signUp } from "@/lib/actions/user.actions";
 import PlaidLink from "./PlaidLink";
+import Image from "next/image";
 
 type AuthFormProps = {
   type: string;
@@ -78,6 +79,7 @@ const AuthForm = ({ type }: AuthFormProps) => {
     <section className="auth-form">
       <header className="flex flex-col gap-5 md:gap-8">
         <Link href="/" className="flex items-center gap-1 cursor-pointer">
+          <Image src="/icons/logo.png" alt="logo" width={45} height={45} />
           <h1 className="text-26 font-ibm-plex-serif font-bold text-black-1">
             Quest
           </h1>

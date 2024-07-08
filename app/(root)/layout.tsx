@@ -19,7 +19,7 @@ export default async function RootLayout({
       <Sidebar user={user} />
       <div className="flex size-full flex-col">
         <div className="root-layout">
-          <Image src="/icons/logo.svg" alt="menu icon" width={30} height={30} />
+          <Image src="/icons/logo.png" alt="menu icon" width={30} height={30} />
           <div className="">
             <MobileNav user={user} />
           </div>
