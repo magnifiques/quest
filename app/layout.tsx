@@ -11,7 +11,7 @@ const ibmPlexSerif = IBM_Plex_Serif({
 });
 
 export const metadata: Metadata = {
-  title: "Quest",
+  title: "Quest - Manage your finance Confidently!",
   description: "Quest is the answer for every financial needs",
   icons: "/icons/logo.svg",
 };
