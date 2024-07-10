@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { Button } from "../ui/button";
+import { toast } from "react-toastify";
 
 const Copy = ({ title }: { title: string }) => {
   const [hasCopied, setHasCopied] = useState(false);
@@ -8,6 +9,16 @@ const Copy = ({ title }: { title: string }) => {
   const copyToClipboard = () => {
     navigator.clipboard.writeText(title);
     setHasCopied(true);
+    toast("Link Copied!", {
+      position: "top-center",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+    });
 
     setTimeout(() => {
       setHasCopied(false);

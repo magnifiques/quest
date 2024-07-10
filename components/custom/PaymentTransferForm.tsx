@@ -24,6 +24,7 @@ import { Input } from "../ui/input";
 import { Button } from "../ui/button";
 import { Textarea } from "../ui/textarea";
 import { BankDropdown } from "./BankDropdown";
+import { toast } from "react-toastify";
 
 const formSchema = z.object({
   email: z.string().email("Invalid email address"),
@@ -82,10 +83,22 @@ const PaymentTransferForm = ({ accounts }: PaymentTransferFormProps) => {
 
         if (newTransaction) {
           form.reset();
+          toast.success("Amount has been successfully transferred!", {
+            position: "top-center",
+            draggable: true,
+            closeOnClick: true,
+            autoClose: 5000,
+          });
           router.push("/");
         }
       }
     } catch (error) {
+      toast.error("Something went wrong!", {
+        position: "top-center",
+        draggable: true,
+        closeOnClick: true,
+        autoClose: 5000,
+      });
       console.error("Submitting create transfer request failed: ", error);
     }
 
@@ -219,6 +232,9 @@ const PaymentTransferForm = ({ accounts }: PaymentTransferFormProps) => {
               <div className="payment-transfer_form-item py-5">
                 <FormLabel className="text-14 w-full max-w-[280px] font-medium text-gray-700">
                   Amount
+                  <p className="py-2 font-semibold">
+                    Don't forget to add decimal points after the amount!
+                  </p>
                 </FormLabel>
                 <div className="flex w-full flex-col">
                   <FormControl>

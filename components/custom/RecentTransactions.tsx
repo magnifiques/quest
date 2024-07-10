@@ -19,6 +19,7 @@ const RecentTransactions = ({
   const indexOfFirst = indexOfLast - rowsPerPage;
 
   const currentTransactions = transactions.slice(indexOfFirst, indexOfLast);
+
   return (
     <section className="recent-transactions">
       <header className="flex items-center justify-between">
@@ -31,7 +32,7 @@ const RecentTransactions = ({
         </Link>
       </header>
       <Tabs defaultValue={appwriteItemId} className="w-full">
-        <TabsList className="recent-transaction-tablist">
+        <TabsList className="recent-transactions-tablist">
           {accounts.map((account: Account) => {
             return (
               <TabsTrigger key={account.id} value={appwriteItemId}>

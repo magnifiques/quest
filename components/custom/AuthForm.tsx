@@ -14,6 +14,7 @@ import { useRouter } from "next/navigation";
 import { signIn, signUp } from "@/lib/actions/user.actions";
 import PlaidLink from "./PlaidLink";
 import Image from "next/image";
+import { toast } from "react-toastify";
 
 type AuthFormProps = {
   type: string;
@@ -57,6 +58,13 @@ const AuthForm = ({ type }: AuthFormProps) => {
 
         const newUser = await signUp(userData);
         setUser(newUser);
+
+        toast.success("Account Successfully Created!", {
+          position: "top-center",
+          autoClose: 7000,
+          draggable: true,
+          closeOnClick: true,
+        });
       }
       if (type === "sign-in") {
         const response = await signIn({
@@ -65,11 +73,17 @@ const AuthForm = ({ type }: AuthFormProps) => {
         });
 
         if (response) {
+          toast.success("Logged In Successfully", {
+            position: "top-center",
+            autoClose: 7000,
+            draggable: true,
+            closeOnClick: true,
+          });
           router.push("/");
         }
       }
     } catch (error) {
-      console.log(error);
+      toast.error("Something went wrong");
     } finally {
       setIsLoading(false);
     }

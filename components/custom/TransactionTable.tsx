@@ -59,7 +59,7 @@ const TransactionTable = ({ transactions }: TransactionTableProps) => {
                 isDebit || amount[0] === "-" ? "bg-[#fffbfa]" : "bg-[#f6fef9]"
               } !over:bg-none !border-b-DEFAULT`}
             >
-              <TableCell className="max-w-[250px] pl-2 pr-10">
+              <TableCell className="max-w-[220px] pl-2 pr-10">
                 <div className="flex items-center gap-3">
                   <h1 className="text-14 truncate font-semibold text-[#344054]">
                     {removeSpecialCharacters(t.name)}
