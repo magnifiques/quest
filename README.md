@@ -52,4 +52,22 @@ Make sure you have the following installed on your machine:
 1. Clone the repo
    ```sh
    git clone https://github.com/magnifiques/quest.git
+2. Install NPM packages
+   ```sh
+   npm install
+   or
+   ```sh
+   yarn install```
+3. Create and configure your .env.local file with the necessary API keys and settings.
+   ```sh
+   npm run dev
+   or
+   yarn dev
 
+### Contribution
+Any contributions you make are **greatly appreciated**.
+
+### Contact
+Arpit Vaghela - [LinkedIn](https://www.linkedin.com/in/arpitvaghela)
+
+Project Link: https://quest-finance.vercel.app/
