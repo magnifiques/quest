@@ -56,8 +56,7 @@ Make sure you have the following installed on your machine:
    ```sh
    npm install
    or
-   ```sh
-   yarn install```
+   yarn install
 3. Create and configure your .env.local file with the necessary API keys and settings.
    ```sh
    npm run dev
