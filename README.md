@@ -1,10 +1,10 @@
 # Quest - Manage Your Finance Confidently!
 
-![Quest Logo](https://your-logo-url-here.com) 
-
 ## About
 
 **Quest** is a finance management dashboard web application built using Next.js 14! This robust platform connects multiple bank accounts, displays real-time transactions, and allows seamless fund transfers between users. 
+![quest-finance vercel app_sign-in](https://github.com/user-attachments/assets/40f5c62f-04b0-447a-a0f6-5df94c3e1654)
+
 
 ## Tech Stack
 
@@ -19,6 +19,9 @@
 - **Chart.js**: [Chart.js](https://www.chartjs.org/) is a flexible JavaScript charting library for creating interactive and customizable charts and graphs.
 - **ShadCN**: [ShadCN](https://github.com/shadcn/ui) is a modern component library for building responsive and accessible web interfaces, integrating well with TailwindCSS.
 
+![quest-finance vercel app_](https://github.com/user-attachments/assets/633736dd-793c-41d8-8128-4f1be4a93782)
+
+
 ## Key Features
 
 - **Authentication**: Ultra-secure server-side authentication with comprehensive validations and authorization, ensures your data stays protected.
@@ -30,11 +33,9 @@
 - **Funds Transfer**: Quest uses Dwolla for handling ACH payments, enabling users to transfer funds between accounts effortlessly. Dwolla’s API ensures that these transactions are secure and compliant with industry regulations.
 - **Responsive Design**: Enjoy a seamless and consistent user experience across all devices, including desktops, tablets, and mobile platforms, thanks to a responsive design approach.
 
-## Screenshots
+![quest-finance vercel app_my-banks](https://github.com/user-attachments/assets/48135aad-6181-41d0-afe0-de65249413c4)
+![quest-finance vercel app_transaction-history](https://github.com/user-attachments/assets/860d7014-076f-4e59-9c8d-8d4f8ed8a11c)
 
-![Home Page](https://your-homepage-screenshot-url-here.com)
-![Bank Management](https://your-bankmanagement-screenshot-url-here.com)
-![Transaction History](https://your-transactionhistory-screenshot-url-here.com)
 
 ## Getting Started
 
@@ -51,3 +52,4 @@ Make sure you have the following installed on your machine:
 1. Clone the repo
    ```sh
    git clone https://github.com/magnifiques/quest.git
+
